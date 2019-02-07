@@ -15,6 +15,10 @@
 		C5B98A79220B9F110048930B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5B98A77220B9F110048930B /* Main.storyboard */; };
 		C5B98A7B220B9F130048930B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5B98A7A220B9F130048930B /* Assets.xcassets */; };
 		C5B98A7E220B9F130048930B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5B98A7C220B9F130048930B /* LaunchScreen.storyboard */; };
+		C5B98A8D220BC4A20048930B /* Starfield.sks in Resources */ = {isa = PBXBuildFile; fileRef = C5B98A8B220BC4A20048930B /* Starfield.sks */; };
+		C5B98A8E220BC4A20048930B /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = C5B98A8C220BC4A20048930B /* Explosion.sks */; };
+		C5B98A91220BC5300048930B /* explosion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C5B98A8F220BC5300048930B /* explosion.mp3 */; };
+		C5B98A92220BC5300048930B /* torpedo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C5B98A90220BC5300048930B /* torpedo.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		C5B98A7A220B9F130048930B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5B98A7D220B9F130048930B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C5B98A7F220B9F130048930B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5B98A8B220BC4A20048930B /* Starfield.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Starfield.sks; sourceTree = "<group>"; };
+		C5B98A8C220BC4A20048930B /* Explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Explosion.sks; sourceTree = "<group>"; };
+		C5B98A8F220BC5300048930B /* explosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = explosion.mp3; sourceTree = "<group>"; };
+		C5B98A90220BC5300048930B /* torpedo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = torpedo.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +73,11 @@
 				C5B98A71220B9F110048930B /* Actions.sks */,
 				C5B98A73220B9F110048930B /* GameScene.swift */,
 				C5B98A75220B9F110048930B /* GameViewController.swift */,
+				C5B98A8F220BC5300048930B /* explosion.mp3 */,
+				C5B98A90220BC5300048930B /* torpedo.mp3 */,
 				C5B98A77220B9F110048930B /* Main.storyboard */,
+				C5B98A8C220BC4A20048930B /* Explosion.sks */,
+				C5B98A8B220BC4A20048930B /* Starfield.sks */,
 				C5B98A7A220B9F130048930B /* Assets.xcassets */,
 				C5B98A7C220B9F130048930B /* LaunchScreen.storyboard */,
 				C5B98A7F220B9F130048930B /* Info.plist */,
@@ -131,11 +143,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5B98A8D220BC4A20048930B /* Starfield.sks in Resources */,
 				C5B98A79220B9F110048930B /* Main.storyboard in Resources */,
 				C5B98A70220B9F110048930B /* GameScene.sks in Resources */,
 				C5B98A7B220B9F130048930B /* Assets.xcassets in Resources */,
+				C5B98A91220BC5300048930B /* explosion.mp3 in Resources */,
 				C5B98A7E220B9F130048930B /* LaunchScreen.storyboard in Resources */,
 				C5B98A72220B9F110048930B /* Actions.sks in Resources */,
+				C5B98A92220BC5300048930B /* torpedo.mp3 in Resources */,
+				C5B98A8E220BC4A20048930B /* Explosion.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
