@@ -9,17 +9,19 @@
 import SpriteKit
 import GameplayKit
 import CoreMotion
+let screenSize = UIScreen.main.bounds
+var screenWidth: CGFloat?
+var screenHeight: CGFloat?
 
 class GameScene: SKScene, SKPhysicsContactDelegate {
+    
     
     var space1: Space?
     var space2: Space?
     var player:SKSpriteNode!
     var degToRad = 0.01745329252
     
-    let screenSize = UIScreen.main.bounds
-    var screenWidth: CGFloat?
-    var screenHeight: CGFloat?
+    
 
     
     var scoreLabel:SKLabelNode!
@@ -55,14 +57,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         space2?.zPosition = 0
         addChild(space2!)
         
-        player = SKSpriteNode(imageNamed: "shuttle")
+        player = Player()
+        player?.position = CGPoint(x: 0.0, y: -500.0)
+        addChild(player!)
         
-        player.position = CGPoint(x: self.frame.size.width / 2, y: player.size.height / 2 + 20)
         
-        self.addChild(player)
-        
-        self.physicsWorld.gravity = CGVector(dx: 0, dy: 0)
-        self.physicsWorld.contactDelegate = self
         
         scoreLabel = SKLabelNode(text: "Score: 0")
         scoreLabel.position = CGPoint(x: 100, y: self.frame.size.height - 60)
@@ -72,6 +71,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         score = 0
         
         self.addChild(scoreLabel)
+        self.physicsWorld.gravity = CGVector(dx: 0, dy: 0)
+        self.physicsWorld.contactDelegate = self
         
         
         gameTimer = Timer.scheduledTimer(timeInterval: 0.75, target: self, selector: #selector(addAlien), userInfo: nil, repeats: true)
@@ -109,9 +110,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         alien.physicsBody?.collisionBitMask = 0
         
         self.addChild(alien)
-        self.physicsWorld.gravity = CGVector(dx: 0, dy: 0)
-        self.physicsWorld.contactDelegate = self
-        
+    
         let animationDuration:TimeInterval = 6
         
         var actionArray = [SKAction]()
@@ -224,5 +223,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // Called before each frame is rendered
         space1?.Update()
         space2?.Update()
+     
+
+        
     }
 }
