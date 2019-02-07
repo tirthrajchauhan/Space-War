@@ -19,6 +19,11 @@
 		C5B98A8E220BC4A20048930B /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = C5B98A8C220BC4A20048930B /* Explosion.sks */; };
 		C5B98A91220BC5300048930B /* explosion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C5B98A8F220BC5300048930B /* explosion.mp3 */; };
 		C5B98A92220BC5300048930B /* torpedo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C5B98A90220BC5300048930B /* torpedo.mp3 */; };
+		C5B98A97220CC5830048930B /* Space.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B98A96220CC5830048930B /* Space.swift */; };
+		C5B98A99220CC5F00048930B /* space.png in Resources */ = {isa = PBXBuildFile; fileRef = C5B98A98220CC5F00048930B /* space.png */; };
+		C5B98A9B220CC61B0048930B /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B98A9A220CC61B0048930B /* GameObject.swift */; };
+		C5B98A9D220CC6580048930B /* GameProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B98A9C220CC6580048930B /* GameProtocol.swift */; };
+		C5B98A9F220CCAC90048930B /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B98A9E220CCAC90048930B /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +41,11 @@
 		C5B98A8C220BC4A20048930B /* Explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Explosion.sks; sourceTree = "<group>"; };
 		C5B98A8F220BC5300048930B /* explosion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = explosion.mp3; sourceTree = "<group>"; };
 		C5B98A90220BC5300048930B /* torpedo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = torpedo.mp3; sourceTree = "<group>"; };
+		C5B98A96220CC5830048930B /* Space.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Space.swift; sourceTree = "<group>"; };
+		C5B98A98220CC5F00048930B /* space.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = space.png; sourceTree = "<group>"; };
+		C5B98A9A220CC61B0048930B /* GameObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
+		C5B98A9C220CC6580048930B /* GameProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameProtocol.swift; sourceTree = "<group>"; };
+		C5B98A9E220CCAC90048930B /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +62,7 @@
 		C5B98A61220B9F110048930B = {
 			isa = PBXGroup;
 			children = (
+				C5B98A95220CC5620048930B /* Objects */,
 				C5B98A6C220B9F110048930B /* Space War */,
 				C5B98A6B220B9F110048930B /* Products */,
 			);
@@ -81,8 +92,20 @@
 				C5B98A7A220B9F130048930B /* Assets.xcassets */,
 				C5B98A7C220B9F130048930B /* LaunchScreen.storyboard */,
 				C5B98A7F220B9F130048930B /* Info.plist */,
+				C5B98A98220CC5F00048930B /* space.png */,
 			);
 			path = "Space War";
+			sourceTree = "<group>";
+		};
+		C5B98A95220CC5620048930B /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				C5B98A96220CC5830048930B /* Space.swift */,
+				C5B98A9A220CC61B0048930B /* GameObject.swift */,
+				C5B98A9C220CC6580048930B /* GameProtocol.swift */,
+				C5B98A9E220CCAC90048930B /* Player.swift */,
+			);
+			path = Objects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +168,7 @@
 			files = (
 				C5B98A8D220BC4A20048930B /* Starfield.sks in Resources */,
 				C5B98A79220B9F110048930B /* Main.storyboard in Resources */,
+				C5B98A99220CC5F00048930B /* space.png in Resources */,
 				C5B98A70220B9F110048930B /* GameScene.sks in Resources */,
 				C5B98A7B220B9F130048930B /* Assets.xcassets in Resources */,
 				C5B98A91220BC5300048930B /* explosion.mp3 in Resources */,
@@ -164,7 +188,11 @@
 			files = (
 				C5B98A74220B9F110048930B /* GameScene.swift in Sources */,
 				C5B98A76220B9F110048930B /* GameViewController.swift in Sources */,
+				C5B98A97220CC5830048930B /* Space.swift in Sources */,
 				C5B98A6E220B9F110048930B /* AppDelegate.swift in Sources */,
+				C5B98A9F220CCAC90048930B /* Player.swift in Sources */,
+				C5B98A9B220CC61B0048930B /* GameObject.swift in Sources */,
+				C5B98A9D220CC6580048930B /* GameProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
