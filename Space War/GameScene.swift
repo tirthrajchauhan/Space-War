@@ -44,11 +44,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         screenWidth = frame.width
         screenHeight = frame.height
         
-        // add the ocean1 to scene
+        // add the space1 to scene
         space1 = Space()
         addChild(space1!)
         
-        // add the ocean1 to scene
+        // add the space2 to scene
         space2 = Space()
         space2?.position.y = 772
         space2?.zPosition = 0
@@ -59,11 +59,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(player!)
         
         
-        
+        // adding scorelabel to the screen
         scoreLabel = SKLabelNode(text: "Score: 0")
-        scoreLabel.position = CGPoint(x: 100, y: self.frame.size.height - 60)
+        scoreLabel.position = CGPoint(x: 100, y: -self.frame.size.height - 180)
+        scoreLabel.zPosition = 2
         scoreLabel.fontName = "AmericanTypewriter-Bold"
-        scoreLabel.fontSize = 36
+        scoreLabel.fontSize = 18
         scoreLabel.fontColor = UIColor.white
         score = 0
         
@@ -83,22 +84,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             }
         }
 
-        
-        
+
     }
-    
-    
     
     @objc func addAlien () {
         possibleAliens = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: possibleAliens) as! [String]
         
         let alien = SKSpriteNode(imageNamed: possibleAliens[0])
         
-        let randomAlienPosition = GKRandomDistribution(lowestValue: 0, highestValue: 414)
+        let randomAlienPosition = GKRandomDistribution(lowestValue: 0, highestValue: 750)
         let position = CGFloat(randomAlienPosition.nextInt())
         
         alien.position = CGPoint(x: position, y: self.frame.size.height + alien.size.height)
-        
+        alien.zPosition = 1
         alien.physicsBody = SKPhysicsBody(rectangleOf: alien.size)
         alien.physicsBody?.isDynamic = true
         
