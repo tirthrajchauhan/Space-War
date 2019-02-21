@@ -61,10 +61,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         // adding scorelabel to the screen
         scoreLabel = SKLabelNode(text: "Score: 0")
-        scoreLabel.position = CGPoint(x: 100, y: -self.frame.size.height - 180)
-        scoreLabel.zPosition = 2
+        scoreLabel.position = CGPoint(x: 100, y: -60)
+        scoreLabel.zPosition = 3
         scoreLabel.fontName = "AmericanTypewriter-Bold"
-        scoreLabel.fontSize = 18
+        scoreLabel.fontSize = 36
         scoreLabel.fontColor = UIColor.white
         score = 0
         
