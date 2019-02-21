@@ -21,9 +21,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     var player:SKSpriteNode!
     var degToRad = 0.01745329252
     
-    
-
-    
     var scoreLabel:SKLabelNode!
     var score:Int = 0 {
         didSet {
@@ -58,7 +55,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(space2!)
         
         player = Player()
-        player?.position = CGPoint(x: 0.0, y: -500.0)
+        player?.position = CGPoint(x: 0.0, y: -1200.0)
         addChild(player!)
         
         
@@ -116,7 +113,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         var actionArray = [SKAction]()
         
         
-        actionArray.append(SKAction.move(to: CGPoint(x: position, y: -alien.size.height), duration: animationDuration))
+        actionArray.append(SKAction.move(to: CGPoint(x: position, y: -alien.size.height - 1334), duration: animationDuration))
         actionArray.append(SKAction.removeFromParent())
         
         alien.run(SKAction.sequence(actionArray))
@@ -136,6 +133,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let torpedoNode = SKSpriteNode(imageNamed: "torpedo")
         torpedoNode.position = player.position
         torpedoNode.position.y += 5
+        torpedoNode.zPosition = 2
 
         torpedoNode.physicsBody = SKPhysicsBody(circleOfRadius: torpedoNode.size.width / 2)
         torpedoNode.physicsBody?.isDynamic = true
@@ -156,9 +154,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         actionArray.append(SKAction.removeFromParent())
 
         torpedoNode.run(SKAction.sequence(actionArray))
-
-
-
     }
 
 

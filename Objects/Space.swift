@@ -12,7 +12,7 @@ class Space : GameObject {
     // Initializers
     init() {
         // initialize the object with an image
-        super.init(imageString: "space", initialScale: 2.0)
+        super.init(imageString: "space", initialScale: 3.0)
         Start()
     }
     
