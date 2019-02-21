@@ -18,7 +18,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     var space1: Space?
     var space2: Space?
-    var player:SKSpriteNode!
+    var player: Player?
     var degToRad = 0.01745329252
     
     var scoreLabel:SKLabelNode!
@@ -129,7 +129,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         self.run(SKAction.playSoundFileNamed("torpedo.mp3", waitForCompletion: false))
 
         let torpedoNode = SKSpriteNode(imageNamed: "torpedo")
-        torpedoNode.position = player.position
+        torpedoNode.position = player!.position
         torpedoNode.position.y += 5
         torpedoNode.zPosition = 2
 
@@ -148,7 +148,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
         var actionArray = [SKAction]()
 
-        actionArray.append(SKAction.move(to: CGPoint(x: player.position.x, y: self.frame.size.height + 10), duration: animationDuration))
+        actionArray.append(SKAction.move(to: CGPoint(x: (player?.position.x)!, y: self.frame.size.height + 10), duration: animationDuration))
         actionArray.append(SKAction.removeFromParent())
 
         torpedoNode.run(SKAction.sequence(actionArray))
@@ -197,12 +197,12 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
 
     override func didSimulatePhysics() {
 
-        player.position.x += xAcceleration * 50
+        player?.position.x += xAcceleration * 50
 
-        if player.position.x < -20 {
-            player.position = CGPoint(x: self.size.width + 20, y: player.position.y)
-        }else if player.position.x > self.size.width + 20 {
-            player.position = CGPoint(x: -20, y: player.position.y)
+        if (player?.position.x)! < CGFloat(-20.0) {
+            player?.position = CGPoint(x: self.size.width + 20, y: (player?.position.y)!)
+        }else if (player?.position.x)! > self.size.width + 20 {
+            player?.position = CGPoint(x: -20, y: (player?.position.y)!)
         }
 
     }
@@ -216,8 +216,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         // Called before each frame is rendered
         space1?.Update()
         space2?.Update()
-     
-
-        
+        player?.Update()
     }
 }

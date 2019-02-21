@@ -20,19 +20,19 @@ class Player : GameObject {
     }
     
     override func Start() {
-        self.zPosition = 2
+        self.zPosition = 1
     }
     
     
     override func CheckBounds() {
         // check the right boundary
-        if(self.position.x > screenSize.width - self.halfWidth!) {
-            self.position.x = screenSize.width - self.halfWidth!
+        if(self.position.x > 720 - self.halfWidth!) {
+            self.position.x = 720 - self.halfWidth!
         }
         
         // check the left boundary
-        if(self.position.x < -screenSize.width + self.halfWidth!) {
-            self.position.x = -screenSize.width + self.halfWidth!
+        if(self.position.x < 30 + self.halfWidth!) {
+            self.position.x = 30 + self.halfWidth!
         }
     }
     
