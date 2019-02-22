@@ -26,15 +26,14 @@ class GameOver: SKScene {
         if let location = touch?.location(in: self){
             let nodesArray = self.nodes(at: location)
             
-            if nodesArray.first?.name == "newGameButton"{
-                
-                if let view = self.view {
-                    if let scene = SKScene(fileNamed: "GameScene") {
-                        scene.scaleMode = .aspectFit
-                        view.presentScene(scene)
-                    }
+            if let view = self.view {
+                if let scene = SKScene(fileNamed: "GameScene") {
+                    scene.scaleMode = .aspectFit
+                    view.presentScene(scene)
                 }
             }
+            
+            
         }
     }
 }

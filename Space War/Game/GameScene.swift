@@ -120,15 +120,25 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         actionArray.append(SKAction.move(to: CGPoint(x: position, y: -alien.size.height - 1334), duration: animationDuration))
         
-//        actionArray.append(SKAction.run{
-//            self.run(SKAction.playSoundFileNamed("explosion.mp3", waitForCompletion: false))
-//            if self.livesArray.count > 0{
-//            let liveNode = self.livesArray.first
-//            liveNode!.removeFromParent()
-//            self.livesArray.removeFirst()
-//                
-//            }
-//        })
+        actionArray.append(SKAction.run{
+            self.run(SKAction.playSoundFileNamed("explosion.mp3", waitForCompletion: false))
+            if self.livesArray.count > 0{
+            let liveNode = self.livesArray.first
+            liveNode!.removeFromParent()
+            self.livesArray.removeFirst()
+                
+                if self.livesArray.count == 0{
+                    // GameOver Screen Transition
+                    if let view = self.view {
+                        if let scene = SKScene(fileNamed: "GameOver") {
+                            scene.scaleMode = .aspectFit
+                            view.presentScene(scene)
+                        }
+                    }
+
+                }
+            }
+        })
         
         actionArray.append(SKAction.removeFromParent())
         
