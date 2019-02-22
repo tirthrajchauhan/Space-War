@@ -42,9 +42,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let motionManger = CMMotionManager()
     var xAcceleration:CGFloat = 0
     
-
+    var livesArray:[SKSpriteNode]!
     
     override func didMove(to view: SKView) {
+        
+        addLive()
         
         screenWidth = frame.width
         screenHeight = frame.height
@@ -66,10 +68,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         // adding scorelabel to the screen
         scoreLabel = SKLabelNode(text: "Score: 0")
-        scoreLabel.position = CGPoint(x: 100, y: -60)
+        scoreLabel.position = CGPoint(x: 80, y: -60)
         scoreLabel.zPosition = 3
         scoreLabel.fontName = "AmericanTypewriter-Bold"
-        scoreLabel.fontSize = 36
+        scoreLabel.fontSize = 28
         scoreLabel.fontColor = UIColor.white
         score = 0
         
@@ -117,6 +119,17 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         
         actionArray.append(SKAction.move(to: CGPoint(x: position, y: -alien.size.height - 1334), duration: animationDuration))
+        
+//        actionArray.append(SKAction.run{
+//            self.run(SKAction.playSoundFileNamed("explosion.mp3", waitForCompletion: false))
+//            if self.livesArray.count > 0{
+//            let liveNode = self.livesArray.first
+//            liveNode!.removeFromParent()
+//            self.livesArray.removeFirst()
+//                
+//            }
+//        })
+        
         actionArray.append(SKAction.removeFromParent())
         
         alien.run(SKAction.sequence(actionArray))
@@ -124,6 +137,16 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
     }
     
+    func addLive(){
+        livesArray = [SKSpriteNode]()
+        
+       for live in 1 ... 3 {
+            let liveNode = SKSpriteNode(imageNamed: "shuttle")
+            liveNode.position = CGPoint(x: (500 - CGFloat(4 - live) * liveNode.size.width), y: -60)
+            self.addChild(liveNode)
+            livesArray.append(liveNode)
+        }
+    }
 
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         fireTorpedo()
