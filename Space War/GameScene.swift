@@ -39,6 +39,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let motionManger = CMMotionManager()
     var xAcceleration:CGFloat = 0
     
+
+    
     override func didMove(to view: SKView) {
         
         screenWidth = frame.width

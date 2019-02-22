@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		414BE580221F4ECD006E9A5C /* MenuScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 414BE57F221F4ECD006E9A5C /* MenuScene.sks */; };
+		414BE582221F515E006E9A5C /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414BE581221F515E006E9A5C /* MenuScene.swift */; };
 		C5B98A6E220B9F110048930B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5B98A6D220B9F110048930B /* AppDelegate.swift */; };
 		C5B98A70220B9F110048930B /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C5B98A6F220B9F110048930B /* GameScene.sks */; };
 		C5B98A72220B9F110048930B /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = C5B98A71220B9F110048930B /* Actions.sks */; };
@@ -27,6 +29,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		414BE57F221F4ECD006E9A5C /* MenuScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MenuScene.sks; sourceTree = "<group>"; };
+		414BE581221F515E006E9A5C /* MenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
 		C5B98A6A220B9F110048930B /* Space War.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Space War.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5B98A6D220B9F110048930B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C5B98A6F220B9F110048930B /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 				C5B98A8F220BC5300048930B /* explosion.mp3 */,
 				C5B98A90220BC5300048930B /* torpedo.mp3 */,
 				C5B98A77220B9F110048930B /* Main.storyboard */,
+				414BE57F221F4ECD006E9A5C /* MenuScene.sks */,
+				414BE581221F515E006E9A5C /* MenuScene.swift */,
 				C5B98A8C220BC4A20048930B /* Explosion.sks */,
 				C5B98A8B220BC4A20048930B /* Starfield.sks */,
 				C5B98A7A220B9F130048930B /* Assets.xcassets */,
@@ -174,6 +180,7 @@
 				C5B98A91220BC5300048930B /* explosion.mp3 in Resources */,
 				C5B98A7E220B9F130048930B /* LaunchScreen.storyboard in Resources */,
 				C5B98A72220B9F110048930B /* Actions.sks in Resources */,
+				414BE580221F4ECD006E9A5C /* MenuScene.sks in Resources */,
 				C5B98A92220BC5300048930B /* torpedo.mp3 in Resources */,
 				C5B98A8E220BC4A20048930B /* Explosion.sks in Resources */,
 			);
@@ -191,6 +198,7 @@
 				C5B98A97220CC5830048930B /* Space.swift in Sources */,
 				C5B98A6E220B9F110048930B /* AppDelegate.swift in Sources */,
 				C5B98A9F220CCAC90048930B /* Player.swift in Sources */,
+				414BE582221F515E006E9A5C /* MenuScene.swift in Sources */,
 				C5B98A9B220CC61B0048930B /* GameObject.swift in Sources */,
 				C5B98A9D220CC6580048930B /* GameProtocol.swift in Sources */,
 			);
