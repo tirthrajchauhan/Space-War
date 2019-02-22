@@ -25,7 +25,7 @@ class GameOver: SKScene {
         let touch = touches.first
         if let location = touch?.location(in: self){
             let nodesArray = self.nodes(at: location)
-            
+            print("touched")
             if let view = self.view {
                 if let scene = SKScene(fileNamed: "GameScene") {
                     scene.scaleMode = .aspectFit
