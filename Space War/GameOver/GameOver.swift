@@ -9,15 +9,15 @@ import UIKit
 import SpriteKit
 
 class GameOver: SKScene {
-    var score:Int = 0
+   //var score:Int = 0
     var newGameButtonNode:SKSpriteNode!
-    
+
     var scoreLabel:SKLabelNode!
     
     override func didMove(to view: SKView) {
         
-         scoreLabel = self.childNode(withName: "scoreLabel") as? SKLabelNode
-       scoreLabel.text = "\(score)"
+        // scoreLabel = self.childNode(withName: "scoreLabel") as? SKLabelNode
+      // scoreLabel.text = "\(score)"
         newGameButtonNode = self.childNode(withName: "newGameButton") as? SKSpriteNode
         }
     
@@ -35,5 +35,5 @@ class GameOver: SKScene {
             
             
         }
-    }
+}
 }

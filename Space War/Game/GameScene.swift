@@ -133,6 +133,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
                         if let scene = SKScene(fileNamed: "GameOver") {
                             scene.scaleMode = .aspectFit
                             view.presentScene(scene)
+                           let gameOver = SKScene(fileNamed: "GameOver") as! GameOver
+                           //gameOver.score = self.score
                         }
                     }
 

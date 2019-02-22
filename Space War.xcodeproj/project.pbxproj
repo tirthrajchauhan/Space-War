@@ -106,8 +106,8 @@
 		414BE5BA221FD4A2006E9A5C /* GameOver */ = {
 			isa = PBXGroup;
 			children = (
-				414BE5B8221FD0FF006E9A5C /* GameOver.swift */,
 				414BE5BB221FDB88006E9A5C /* GameOver.sks */,
+				414BE5B8221FD0FF006E9A5C /* GameOver.swift */,
 			);
 			path = GameOver;
 			sourceTree = "<group>";
