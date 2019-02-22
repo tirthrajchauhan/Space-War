@@ -9,6 +9,9 @@
 import SpriteKit
 import GameplayKit
 import CoreMotion
+import UIKit
+import AVFoundation
+
 let screenSize = UIScreen.main.bounds
 var screenWidth: CGFloat?
 var screenHeight: CGFloat?
@@ -191,9 +194,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         }
 
         score += 5
-
-
     }
+    
+    
+    
 
     override func didSimulatePhysics() {
 

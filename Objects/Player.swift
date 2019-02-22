@@ -39,4 +39,7 @@ class Player : GameObject {
     override func Update() {
         CheckBounds()
     }
+    
+    override func Reset() {
+    }
 }
